@@ -111,7 +111,7 @@ background: linear-gradient(95.82deg, rgba(107, 73, 245, 0.1) 0.93%, rgba(29, 21
 
 
 section {
-  padding: 110px 50px;
+  padding: 80px 50px;
   max-width: 1000px;
   margin: auto;
 
@@ -354,7 +354,8 @@ border-radius: 7px;
   flex: 1;
   min-width: 220px;
   padding-left: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  margin-top: -50px;
 }
 .materials {
   flex: 1;
@@ -868,10 +869,93 @@ list-style: circle;
   background-repeat: no-repeat;
 }
 
+.gradient-text {
+  background: linear-gradient(90deg, rgba(107, 73, 245, 1), rgba(29, 21, 87, 1));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* для Firefox */
+  color: transparent;
+  
+}
 
+.hero__circle {
+    left: 50px;
+    bottom: 210px;
+    transform: translate(-70%, 45%);
+    
+}
+.count__circle {
+  position: absolute;
+  right: 0; /* обовʼязково — вирівнювання по правому краю */
+ 
+ transform: translate(-70%, 45%);
+  z-index: -1;
+}
 
+.count__circle4 {
+  position: absolute;
+    left: -290px;
+    bottom: 5px;
+    transform: translate(-70%, 45%);
+  z-index: -1;
+}
+.circle3 {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(234, 234, 234, 1) 0%, rgba(143, 215, 168, 1)100%);
+  filter: blur(70px);
+  z-index: -1;
+}
+.circle2 {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(234, 234, 234, 1) 0%, #5C3DB5 100%);
+  filter: blur(100px);
+  z-index: 0;
+}
 
-/* ===== АДАПТИВ ДЛЯ 1260px - 1920px ===== */
+.circle1 {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(234, 234, 234, 1) 0%, #5C3DB5 100%);
+    filter: blur(100px);
+    z-index: -1;
+}
+
+.circle4{
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(234, 234, 234, 1) 0%, rgba(143, 215, 168, 1)100%);
+  filter: blur(170px);
+  z-index: -1;
+  right: 790px;
+  padding-top: 200px;
+}
+.circle5{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(234, 234, 234, 1) 0%, #5C3DB5 100%);
+  filter: blur(100px);
+  z-index: -1;
+  margin-top: 550px;
+}
+.circle6{
+    
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(234, 234, 234, 1) 0%, rgba(143, 215, 168, 1)100%);
+  filter: blur(120px);
+  z-index: -1;
+  left: 790px;
+  padding-top: 20px;
+}
 @media screen and (max-width: 1920px) and (min-width: 1260px) {
   .main-content {
     padding-left: 30px;
@@ -1019,7 +1103,7 @@ list-style: circle;
 
   .card-side {
     text-align: center;
-    margin-top: 20px;
+    margin-top: -80px;
   }
 
   .card-side .price {
@@ -1201,93 +1285,143 @@ list-style: circle;
     height: 30px;
   }
 }
-
-
-
-.gradient-text {
-  background: linear-gradient(90deg, rgba(107, 73, 245, 1), rgba(29, 21, 87, 1));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text; /* для Firefox */
-  color: transparent;
-  
-}
-
-.hero__circle {
-    left: 50px;
-    bottom: 210px;
-    transform: translate(-70%, 45%);
-    
-}
-.count__circle {
-  position: absolute;
-  right: 0; /* обовʼязково — вирівнювання по правому краю */
- 
- transform: translate(-70%, 45%);
-  z-index: -1;
-}
-
-.count__circle4 {
-  position: absolute;
-    left: -290px;
-    bottom: 5px;
-    transform: translate(-70%, 45%);
-  z-index: -1;
-}
-.circle3 {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  background: radial-gradient(50% 50% at 50% 50%, rgba(234, 234, 234, 1) 0%, rgba(143, 215, 168, 1)100%);
-  filter: blur(70px);
-  z-index: -1;
-}
-.circle2 {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  background: radial-gradient(50% 50% at 50% 50%, rgba(234, 234, 234, 1) 0%, #5C3DB5 100%);
-  filter: blur(100px);
-  z-index: 0;
-}
-
-.circle1 {
-    position: relative;
-    width: 150px;
-    height: 150px;
+@media (max-width: 760px) {
+  .hero__content, .lesson-header {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero__gift {
+    height: auto;
+    flex-direction: column;
+    padding: 20px;
+  }
+  .gift__action img {
+    width: 100px;
+    height: auto;
+    padding-right: 0;
+  }
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .tag-right, .tags-left {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .circle6 {
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
-    background: radial-gradient(50% 50% at 50% 50%, rgba(234, 234, 234, 1) 0%, #5C3DB5 100%);
-    filter: blur(100px);
+    background: radial-gradient(50% 50% at 50% 50%, rgba(234, 234, 234, 1) 0%, rgba(143, 215, 168, 1) 100%);
+    filter: blur(120px);
+    z-index: -1;
+    left: 450px;
+    padding-top: 20px;
+}
+.traffic-block img {
+    width: 200px;
+    padding-right: 150px;
+    max-width: 100%;
+    flex-shrink: 0;
+}
+.count__circle
+ {
+    position: absolute;
+    right: 0;
+    transform: translate(-70%, 45%);
     z-index: -1;
 }
-
-.circle4{
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  background: radial-gradient(50% 50% at 50% 50%, rgba(234, 234, 234, 1) 0%, rgba(143, 215, 168, 1)100%);
-  filter: blur(170px);
-  z-index: -1;
-  right: 790px;
-  padding-top: 200px;
-}
-.circle5{
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-    background: radial-gradient(50% 50% at 50% 50%, rgba(234, 234, 234, 1) 0%, #5C3DB5 100%);
-  filter: blur(100px);
-  z-index: -1;
-  margin-top: 550px;
-}
-.circle6{
+  .lesson-points {
+    grid-template-columns: 1fr;
+    padding-left: 20px;
+  }
+  .lesson-bottom {
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .materials, .results {
+    padding-left: 0;
+  }
+  .media-title .center, .media-title .right {
+    font-size: 32px;
+  }
+  .review-card img {   
+        width: 90%;
+        padding-right: 30px;
     
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  background: radial-gradient(50% 50% at 50% 50%, rgba(234, 234, 234, 1) 0%, rgba(143, 215, 168, 1)100%);
-  filter: blur(120px);
-  z-index: -1;
-  left: 790px;
-  padding-top: 20px;
+  }
+  .reviews-section {
+    text-align: center;
+    margin-top: 250px;
+    padding: 40px 0;}
+    .carousel-nav.next {
+    position: absolute;
+    right: -20px;
+}
+    .carousel-nav.prev {
+    position: absolute;
+    left: -20px;
+}
+  .review-card {
+    width: 100%;
+    padding: 15px;
+  }
+  .reviews-carousel {
+    width: 100%;
+  }
+  .reviews-carousel-wrapper {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+  .carousel-nav {
+    position: static;
+    margin: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero__text h1 {
+    font-size: 22px;
+  }
+  .hero__text .subtitle {
+    font-size: 1em;
+  }
+  .section-main h2 {
+    font-size: 24px;
+  }
+  .main-content {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .carousel-nav {
+    display: none;
+  }
+  .card {
+    width: 90%;
+  }
+  .tag,
+  .tag1 {
+    font-size: 0.8em;
+    padding: 0.4em 0.8em;
+  }
+  .media-title .center, .media-title .right {
+    font-size: 28px;
+  }
+  .lesson-points li {
+    font-size: 14px;
+  }
+  .reviews-section {
+    padding: 30px 10px;
+  }
+}
+
+@media (max-width: 380px) {
+  .btn {
+    padding: 0.5em 1em;
+    font-size: 0.9em;
+  }
+  .lesson-tabs .tab {
+    width: 100%;
+  }
 }
